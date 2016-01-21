@@ -54,4 +54,6 @@ library(dplyr)
 totalGrouped<-group_by(total,Subject,Activity)
 totalGrouped<-summarise_each(totalGrouped,funs(mean))
 
-write.table(totalGrouped,row.names=FALSE)
+write.table(totalGrouped,"totalOutput.txt",row.names=FALSE)
+
+print(totalGrouped)
